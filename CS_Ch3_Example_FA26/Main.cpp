@@ -13,5 +13,9 @@ int main()
 	std::cout << "The number is: " << num2 << std::endl;
 	std::cout << "The number + 1 is: " << num2 + 1 << std::endl; 
 
+	std::cout << "Integer division 11 / 3 = " << 11 / 3 << std::endl; // Integer division
+	std::cout << "Floating-point division 11.0 / 3.0 = " << 11.0 / 3.0 << std::endl; // Floating-point division
+	std::cout << "Modulus operation 11 % 3 = " << 11 % 3 << std::endl; // Modulus operation
+
 	return 0;
 }
