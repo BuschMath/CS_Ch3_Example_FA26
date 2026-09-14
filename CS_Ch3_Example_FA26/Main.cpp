@@ -27,9 +27,15 @@ int main()
 	std::cout << "The answer to life, the universe, and everything is: " << giveMe42() << std::endl;
 
 	int a = 2, b = 3;
-	float c = 4.5;
+	float c = 4;
 	std::cout << "The result of exampleFunction(" << a << ", " << b << ", " << c << ") is: " << exampleFunction(a, b, c) << std::endl;
 	std::cout << "After calling exampleFunction, c is still: " << c << std::endl; // c is unchanged because it was passed by value
+
+	std::cout << "An integer: " << a << std::endl;
+	std::cout << "A float: " << c << std::endl;
+	std::cout << std::showpoint << "An integer with showpoint: " << a << std::endl;
+	std::cout << "A float with showpoint on previous line: " << c << std::endl;
+	std::cout << std::noshowpoint << "A float with noshowpoint: " << c << std::endl;
 
 	return 0;
 }
