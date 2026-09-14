@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 int giveMe42();
 float exampleFunction(int x, int y, float z);
@@ -27,7 +28,7 @@ int main()
 	std::cout << "The answer to life, the universe, and everything is: " << giveMe42() << std::endl;
 
 	int a = 2, b = 3;
-	float c = 4;
+	float c = 4e11;
 	std::cout << "The result of exampleFunction(" << a << ", " << b << ", " << c << ") is: " << exampleFunction(a, b, c) << std::endl;
 	std::cout << "After calling exampleFunction, c is still: " << c << std::endl; // c is unchanged because it was passed by value
 
@@ -36,6 +37,16 @@ int main()
 	std::cout << std::showpoint << "An integer with showpoint: " << a << std::endl;
 	std::cout << "A float with showpoint on previous line: " << c << std::endl;
 	std::cout << std::noshowpoint << "A float with noshowpoint: " << c << std::endl;
+
+	std::cout << "A float with fixed: " << std::fixed << c << std::endl;
+	std::cout << "A float without fixed after command: " << c << std::endl;
+
+	std::cout << "A float with scientific: " << std::scientific << c << std::endl;
+
+	float d = c - 1;
+	std::cout << std::fixed << "d = c - 1 = " << d << std::endl;
+
+	std::cout << std::setw(128000) << "Test" << std::endl;
 
 	return 0;
 }
